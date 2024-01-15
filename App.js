@@ -1,4 +1,4 @@
-https://github.com/2shlomi9/SafeVoice.gitimport React, { useRef, useState, useEffect } from 'react';
+//https://github.com/2shlomi9/SafeVoice.gitimport React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 
 import { StyleSheet, Text, View } from 'react-native';
