@@ -4,10 +4,12 @@ import './App.css';
 import { StyleSheet, Text, View } from 'react-native';
 import { Video } from 'expo-av';
 import {useDeviceOrientation} from '@react-native-community/hooks';
+import { Pedometer } from 'expo-sensors';
 
 
 
 export default function App() {
+  
   const {protrait,landscape} = useDeviceOrientation();
   const videoRef = useRef(null);
   const [showText, setShowText] = useState(false);

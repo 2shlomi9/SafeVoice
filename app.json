@@ -15,26 +15,27 @@
       "**/*"
     ],
     "ios": {
+      "GoogleServiceFile": "./GoogleServices-info.plist",
       "supportsTablet": true
     },
     "android": {
-      "GoogleServiceFile": "google-services.jason",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "project.SafeVoice"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins":[
-      "./node_modules/expo-sample-pedometer/expo-sampel-pedometer-plugins.js",
+    "plugins": [
       "@react-native-firebase/app",
       [
         "expo-build-properties",
         {
-          "ios":{
-            "useFrameworks":"static"
+          "ios": {
+            "useFrameworks": "static"
           }
         }
       ]

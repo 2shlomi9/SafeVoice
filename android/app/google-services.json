@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "525884520653",
+    "project_id": "safevoice-2d31b",
+    "storage_bucket": "safevoice-2d31b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525884520653:android:20e3da80d34d7c9bef5184",
+        "android_client_info": {
+          "package_name": "project.SafeVoice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSMqBKQPCHD_exLIlLWRDSDCZNjrtY7dM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
