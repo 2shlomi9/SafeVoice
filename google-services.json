@@ -12,7 +12,12 @@
           "package_name": "project.SafeVoice"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "525884520653-sjm3jfbcem7ba3k1fdtr6m1j72ulvo70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBSMqBKQPCHD_exLIlLWRDSDCZNjrtY7dM"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525884520653-sjm3jfbcem7ba3k1fdtr6m1j72ulvo70.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525884520653-kmdmij9odvb0gc5du31obuqi99h34kb6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "project.SafeVoice"
+              }
+            }
+          ]
         }
       }
     }

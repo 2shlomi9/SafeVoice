@@ -1,66 +1,26 @@
-//https://github.com/2shlomi9/SafeVoice.gitimport React, { useRef, useState, useEffect } from 'react';
-import './App.css';
+// App.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import VideoScreen from './screens/VideoScreen';
+import HomeScreen from './screens/HomeScreen';
+import SignUpScreen from './screens/SignUpScreen';
+import LoginScreen from './screens/LoginScreen';
+import { app, analytics } from './config'; // Ensure config is imported
 
-import { StyleSheet, Text, View } from 'react-native';
-import { Video } from 'expo-av';
-import {useDeviceOrientation} from '@react-native-community/hooks';
-import { Pedometer } from 'expo-sensors';
+const Stack = createNativeStackNavigator();
 
-
-
-export default function App() {
-  
-  const {protrait,landscape} = useDeviceOrientation();
-  const videoRef = useRef(null);
-  const [showText, setShowText] = useState(false);
-
-  useEffect(() => {
-    const playVideo = async () => {
-      if (videoRef.current) {
-        await videoRef.current.loadAsync(
-          require('./assets/start.mp4'), // Correctly specify the video source
-          {},
-          false
-        );
-
-        videoRef.current.setOnPlaybackStatusUpdate((status) => {
-          if (status.didJustFinish) {
-            // Video has finished playing
-            setShowText(true);
-          }
-        });
-
-        await videoRef.current.playAsync();
-      }
-    };
-
-    playVideo();
-  }, []);
-
+const App = () => {
   return (
-    <View style={styles.container}>
-      {showText ? (
-        <Text>Hello my dear application</Text>
-      ) : (
-        <Video
-          ref={videoRef}
-          style={styles.backgroundVideo}
-          useNativeControls={false} // Set to true if you want to show video controls
-          resizeMode="cover"
-        />
-      )}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="VideoScreen">
+        <Stack.Screen name="VideoScreen" component={VideoScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="LoginScreen" component={LoginScreen} />
+        <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  backgroundVideo: {
-    width: '100%',
-    height: '100%',
-  },
-});
+export default App;
