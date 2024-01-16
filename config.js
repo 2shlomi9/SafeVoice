@@ -3,6 +3,7 @@ import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
 import { getAuth } from 'firebase/auth';
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyB2mwnYUD2OuqLquJE-vO6F3sZQ85iIr5o",
   authDomain: "safevoice-2d31b.firebaseapp.com",
